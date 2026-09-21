@@ -1,0 +1,135 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, -apple-system,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+  /* Neutrals */
+  --color-ink: #14161a;
+  --color-ink-soft: #272b33;
+  --color-muted: #5b6472;
+  --color-line: #e7e6e1;
+  --color-cream: #faf9f6;
+  --color-cream-deep: #f4f2ed;
+
+  /* Bajriwala yellow / gold, sampled from the Customer App */
+  --color-brand-50: #fff9e7;
+  --color-brand-100: #fff1c2;
+  --color-brand-200: #ffe489;
+  --color-brand-300: #ffd451;
+  --color-brand-400: #ffc41f;
+  --color-brand-500: #f5b301;
+  --color-brand-600: #d18f00;
+  --color-brand-700: #9a6a00;
+
+  --color-positive: #1e9e57;
+
+  --shadow-card: 0 1px 2px rgb(20 22 26 / 0.04), 0 8px 24px -12px rgb(20 22 26 / 0.12);
+  --shadow-card-hover: 0 2px 4px rgb(20 22 26 / 0.05), 0 20px 40px -16px rgb(20 22 26 / 0.22);
+  --shadow-phone: 0 32px 70px -28px rgb(20 22 26 / 0.45), 0 8px 20px -10px rgb(20 22 26 / 0.25);
+
+  --animate-float: float 7s ease-in-out infinite;
+  --animate-float-slow: float 9s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(-6px);
+  }
+  50% {
+    transform: translateY(6px);
+  }
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    /* Keeps anchored sections clear of the sticky navbar. */
+    scroll-padding-top: 6rem;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background-color: var(--color-cream);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    /* Guards against any wide child creating a horizontal scrollbar. */
+    overflow-x: clip;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    letter-spacing: -0.02em;
+    text-wrap: balance;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-brand-600);
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+
+  ::selection {
+    background-color: var(--color-brand-300);
+    color: var(--color-ink);
+  }
+}
+
+@utility bg-blueprint {
+  background-image:
+    linear-gradient(to right, rgb(20 22 26 / 0.045) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(20 22 26 / 0.045) 1px, transparent 1px);
+  background-size: 56px 56px;
+}
+
+@utility bg-blueprint-dark {
+  background-image:
+    linear-gradient(to right, rgb(255 255 255 / 0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(255 255 255 / 0.06) 1px, transparent 1px);
+  background-size: 56px 56px;
+}
+
+/* Horizontal snap carousels without a visible scrollbar. */
+@utility no-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* Scroll reveal, applied by components/ui/Reveal.tsx */
+.reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition:
+    opacity 0.65s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
+}
+
+.reveal[data-visible="true"] {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .animate-float,
+  .animate-float-slow {
+    animation: none !important;
+  }
+}
