@@ -58,7 +58,7 @@ export function Hero() {
                 alt=""
                 fill
                 sizes="(max-width: 1024px) 80vw, 480px"
-                className="object-cover"
+                className="object-cover photo-drift"
                 priority
               />
               <div className="absolute inset-0 bg-gradient-to-t from-cream via-cream/20 to-transparent" />

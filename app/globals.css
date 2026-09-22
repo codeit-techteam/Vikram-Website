@@ -30,6 +30,7 @@
 
   --animate-float: float 7s ease-in-out infinite;
   --animate-float-slow: float 9s ease-in-out infinite;
+  --animate-photo-drift: photo-drift 18s ease-in-out infinite;
 }
 
 @keyframes float {
@@ -39,6 +40,54 @@
   }
   50% {
     transform: translateY(6px);
+  }
+}
+
+@keyframes photo-drift {
+  0%,
+  100% {
+    transform: scale(1.06) translate(0, 0);
+  }
+  45% {
+    transform: scale(1.14) translate(-2.2%, 1.4%);
+  }
+  70% {
+    transform: scale(1.1) translate(1.6%, -1.2%);
+  }
+}
+
+@keyframes kenburns-card {
+  0%,
+  100% {
+    transform: scale(1.08) translate(0, 0);
+  }
+  40% {
+    transform: scale(1.16) translate(-2%, 1.5%);
+  }
+  75% {
+    transform: scale(1.12) translate(1.8%, -1%);
+  }
+}
+
+@keyframes explorer-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes explorer-chip-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
   }
 }
 
@@ -117,6 +166,60 @@
   transform: none;
 }
 
+.photo-drift {
+  animation: photo-drift 18s ease-in-out infinite;
+  will-change: transform;
+}
+
+.material-card {
+  transform-style: preserve-3d;
+  transition:
+    transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.35s ease;
+  will-change: transform;
+}
+
+.material-card:hover {
+  box-shadow: var(--shadow-card-hover);
+}
+
+.material-card-media {
+  animation: kenburns-card 16s ease-in-out infinite;
+  animation-delay: calc(var(--card-index, 0) * -2.4s);
+  transform-origin: center;
+  will-change: transform;
+}
+
+.material-card:hover .material-card-media {
+  animation-play-state: paused;
+}
+
+.material-card-shine {
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    105deg,
+    transparent 38%,
+    rgb(255 255 255 / 0.22) 50%,
+    transparent 62%
+  );
+  transform: translateX(-130%);
+  transition: transform 0.75s ease;
+}
+
+.material-card:hover .material-card-shine {
+  transform: translateX(130%);
+}
+
+.explorer-copy {
+  animation: explorer-in 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.explorer-chip {
+  animation: explorer-chip-in 0.45s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
@@ -129,7 +232,18 @@
   }
 
   .animate-float,
-  .animate-float-slow {
+  .animate-float-slow,
+  .photo-drift,
+  .material-card-media,
+  .explorer-copy,
+  .explorer-chip {
     animation: none !important;
+  }
+
+  .material-card,
+  .material-card-shine,
+  .material-card-media {
+    transform: none !important;
+    transition: none !important;
   }
 }

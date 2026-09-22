@@ -12,10 +12,10 @@ export function Delivery() {
           <Reveal className="relative aspect-[4/3] overflow-hidden rounded-3xl">
             <Image
               src="/images/construction/rmc-truck-site.jpg"
-              alt="Ready-mix concrete truck delivering material at an Indian construction site"
+              alt="Ready-mix concrete transit mixer on the road to a delivery site"
               fill
               sizes="(max-width: 1024px) 100vw, 560px"
-              className="object-cover"
+              className="object-cover photo-drift"
             />
           </Reveal>
           <div>

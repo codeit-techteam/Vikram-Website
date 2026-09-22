@@ -50,7 +50,7 @@ export const materialCategories: MaterialCategory[] = [
       "Grey cement for structural work and white cement for finishing, available by the bag so you can order what the stage of work actually needs.",
     highlights: ["PPC & OPC grades", "White cement", "Order from 1 bag", "Bulk pricing"],
     image: "/images/categories/cement.jpg",
-    imageAlt: "Pallet of stacked grey cement sacks in a building material warehouse",
+    imageAlt: "Branded cement sacks stacked in sunlight at a worksite",
   },
   {
     slug: "rmc",
@@ -60,7 +60,7 @@ export const materialCategories: MaterialCategory[] = [
       "Ready-mix concrete delivered by transit mixer for slabs, columns and foundations, so you skip on-site batching.",
     highlights: ["Transit mixer delivery", "Volume based ordering", "Grade options", "Site scheduling"],
     image: "/images/categories/rmc.jpg",
-    imageAlt: "Ready-mix concrete transit mixer truck with a rotating drum",
+    imageAlt: "Crew pouring ready-mix concrete from a transit mixer on site",
   },
   {
     slug: "bricks",
@@ -70,7 +70,7 @@ export const materialCategories: MaterialCategory[] = [
       "Red clay bricks and concrete or AAC blocks for walls and partitions, ordered by the quantity your masonry work needs.",
     highlights: ["Red clay bricks", "AAC blocks", "Concrete blocks", "Quantity based pricing"],
     image: "/images/categories/bricks.jpg",
-    imageAlt: "Stack of red clay bricks beside a stack of grey AAC blocks",
+    imageAlt: "Close-up of clay bricks stacked for masonry work",
   },
   {
     slug: "aggregates",
@@ -80,7 +80,7 @@ export const materialCategories: MaterialCategory[] = [
       "Crushed stone aggregate and blue metal chips in the grades used for concrete, PCC and filling work, priced per metric tonne.",
     highlights: ["20mm stone aggregate", "Blue metal", "Priced per MT", "Bulk price from 5 MT"],
     image: "/images/categories/aggregates.jpg",
-    imageAlt: "Heap of 20mm crushed grey stone aggregate",
+    imageAlt: "Conveyor loading a pile of crushed stone aggregate at a quarry",
   },
   {
     slug: "sand",
@@ -90,7 +90,7 @@ export const materialCategories: MaterialCategory[] = [
       "Construction sand for plaster, masonry and concrete work, delivered to site in the quantity you order.",
     highlights: ["Plastering sand", "Masonry work", "Bulk quantities", "Site delivery"],
     image: "/images/categories/sand.jpg",
-    imageAlt: "Conical heap of fine golden construction sand",
+    imageAlt: "Piles of construction sand and crushed gravel on a building site",
   },
   {
     slug: "adhesives",
@@ -100,7 +100,7 @@ export const materialCategories: MaterialCategory[] = [
       "Tile adhesives, bonding agents and sealants for finishing work, from the brands contractors already ask for.",
     highlights: ["Tile adhesive", "Bonding agents", "Sealants", "Brand options"],
     image: "/images/categories/adhesives.jpg",
-    imageAlt: "Tubs of tile adhesive with a sealant cartridge and caulking gun",
+    imageAlt: "Caulking gun dispensing grey sealant during finishing work",
   },
   {
     slug: "waterproofing",
@@ -110,7 +110,7 @@ export const materialCategories: MaterialCategory[] = [
       "Waterproofing compounds and coatings for terraces, bathrooms and external walls, with pack sizes to match the area.",
     highlights: ["Liquid membranes", "Cementitious coatings", "Terrace & bath", "Multiple pack sizes"],
     image: "/images/categories/waterproofing.jpg",
-    imageAlt: "Bucket of waterproofing compound with a roller and brush",
+    imageAlt: "Paint roller applying a waterproof coating to a wall surface",
   },
   {
     slug: "wall-repair-putty",
@@ -120,7 +120,7 @@ export const materialCategories: MaterialCategory[] = [
       "Wall putty, fillers and repair compounds to get surfaces smooth and ready before painting.",
     highlights: ["Wall putty", "Crack fillers", "Surface prep", "Interior & exterior"],
     image: "/images/categories/putty.jpg",
-    imageAlt: "Open sack of white wall putty powder with a plastering trowel",
+    imageAlt: "Hands holding putty knives with white wall repair compound",
   },
 ];
 
@@ -409,32 +409,17 @@ export const faqs = [
   {
     question: "What is Bajriwala?",
     answer:
-      "Bajriwala is a construction-material marketplace app. You can browse materials such as cement, RMC, bricks, sand and aggregates, place an order from your phone and have the materials delivered to your construction site.",
+      "Bajriwala is a construction-material marketplace app for Android and iPhone. Browse materials, place an order from your phone, and have them delivered to your construction site.",
   },
   {
     question: "What materials can I order?",
     answer:
-      "The app covers construction-material categories including cement and white cement, ready-mix concrete, bricks and blocks, aggregates, sand, adhesives, waterproofing, wall repair and putty, along with categories such as electrical and hardware. The catalogue inside the app is the most up-to-date list.",
-  },
-  {
-    question: "Is Bajriwala available on Android?",
-    answer:
-      "Yes. The Bajriwala Customer App is available on Google Play. Use the Google Play button on this page to open the listing.",
-  },
-  {
-    question: "Is Bajriwala available on iPhone?",
-    answer:
-      "Yes. The Bajriwala Customer App is available on the App Store for iPhone. Use the App Store button on this page to open the listing.",
+      "Cement and white cement, ready-mix concrete, bricks and blocks, aggregates, sand, adhesives, waterproofing, wall repair and putty, plus electrical and hardware. The catalogue in the app is the most up-to-date list.",
   },
   {
     question: "How do I place an order?",
     answer:
       "Download the app, set the delivery location for your site, search or browse for the material you need, choose the variant and quantity, add it to your cart and complete checkout.",
-  },
-  {
-    question: "Can I order construction materials for my site?",
-    answer:
-      "Yes. Orders are placed against a delivery address, so you can have materials sent to the construction site you are working on.",
   },
   {
     question: "How does delivery work?",
@@ -444,16 +429,6 @@ export const faqs = [
   {
     question: "Can I pay online?",
     answer:
-      "Yes. You can pay online through the supported digital payment methods available at checkout in the app.",
-  },
-  {
-    question: "Is Cash on Delivery available?",
-    answer:
-      "Cash on delivery is offered as a payment option where it is available for your order. The payment options you can use are shown at checkout.",
-  },
-  {
-    question: "How can I contact Bajriwala?",
-    answer:
-      "Use the contact options listed in the Need help section of this page to reach the Bajriwala team.",
+      "Yes. Pay online with the digital methods shown at checkout. Cash on delivery is also offered where available for your order.",
   },
 ];

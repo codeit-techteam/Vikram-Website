@@ -12,7 +12,7 @@ export function DownloadCTA() {
         alt=""
         fill
         sizes="100vw"
-        className="object-cover"
+        className="object-cover photo-drift"
       />
       <div className="absolute inset-0 bg-ink/80" />
       <div className="pointer-events-none absolute inset-0 bg-blueprint-dark opacity-40" />

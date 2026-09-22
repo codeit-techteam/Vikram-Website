@@ -1,13 +1,20 @@
 /**
  * Single source of truth for brand strings, external URLs and contact details.
  *
- * Nothing here is hardcoded to a live third-party URL: every external link is
- * read from a NEXT_PUBLIC_* environment variable so the site can be updated by
- * changing configuration only. Empty values are handled by the components that
- * consume them (see `isConfigured`).
+ * External links and contact methods are read from NEXT_PUBLIC_* env vars so
+ * they can be updated without a code change. Contact details fall back to the
+ * same support values used in the customer app when env vars are unset, so the
+ * marketing site never shows developer configuration copy to visitors.
+ * Empty store / social values are handled by consumers via `isConfigured`.
  */
 
 const env = (value: string | undefined): string => (value ?? "").trim();
+
+/** Prefer an env value; fall back when the variable is missing or blank. */
+const envOr = (value: string | undefined, fallback: string): string => {
+  const configured = env(value);
+  return configured.length > 0 ? configured : fallback;
+};
 
 export const siteConfig = {
   brandName: "Bajriwala",
@@ -20,9 +27,10 @@ export const siteConfig = {
   googlePlayUrl: env(process.env.NEXT_PUBLIC_GOOGLE_PLAY_URL),
   appStoreUrl: env(process.env.NEXT_PUBLIC_APP_STORE_URL),
 
-  contactEmail: env(process.env.NEXT_PUBLIC_CONTACT_EMAIL),
-  contactPhone: env(process.env.NEXT_PUBLIC_CONTACT_PHONE),
-  whatsappUrl: env(process.env.NEXT_PUBLIC_WHATSAPP_URL),
+  // Defaults match the customer app support contacts; override via NEXT_PUBLIC_*.
+  contactEmail: envOr(process.env.NEXT_PUBLIC_CONTACT_EMAIL, "support@bajriwala.com"),
+  contactPhone: envOr(process.env.NEXT_PUBLIC_CONTACT_PHONE, "+91 99999 99999"),
+  whatsappUrl: envOr(process.env.NEXT_PUBLIC_WHATSAPP_URL, "https://wa.me/919999999999"),
 
   socialLinks: {
     instagram: env(process.env.NEXT_PUBLIC_INSTAGRAM_URL),

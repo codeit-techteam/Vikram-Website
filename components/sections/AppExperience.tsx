@@ -16,13 +16,13 @@ export function AppExperience() {
         />
 
         <div className="mt-12 grid items-center gap-10 lg:grid-cols-[0.9fr_1.1fr]">
-          <Reveal className="relative aspect-[4/5] overflow-hidden rounded-3xl sm:aspect-[4/3] lg:aspect-[4/5]">
+          <Reveal className="relative aspect-[3/4] overflow-hidden rounded-3xl sm:aspect-[4/5] lg:aspect-[3/4]">
             <Image
               src="/images/construction/contractor-phone.jpg"
-              alt="Construction professional using a smartphone at a building site"
+              alt="Construction professional ordering materials on a smartphone at a building site"
               fill
               sizes="(max-width: 1024px) 100vw, 480px"
-              className="object-cover"
+              className="object-cover object-center photo-drift"
             />
           </Reveal>
           <div className="no-scrollbar flex gap-6 overflow-x-auto pb-2 lg:grid lg:grid-cols-2 lg:overflow-visible">

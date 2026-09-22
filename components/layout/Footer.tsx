@@ -1,5 +1,5 @@
 import { Logo } from "@/components/brand/Logo";
-import { isConfigured, siteConfig } from "@/lib/site-config";
+import { isConfigured, siteConfig, telHref } from "@/lib/site-config";
 import { materialCategories } from "@/lib/content";
 
 const company = [
@@ -21,6 +21,8 @@ const legal = [
 export function Footer() {
   const play = isConfigured(siteConfig.googlePlayUrl);
   const store = isConfigured(siteConfig.appStoreUrl);
+  const email = isConfigured(siteConfig.contactEmail);
+  const phone = isConfigured(siteConfig.contactPhone);
   const social = [
     { label: "Instagram", href: siteConfig.socialLinks.instagram },
     { label: "Facebook", href: siteConfig.socialLinks.facebook },
@@ -37,6 +39,30 @@ export function Footer() {
             <p className="mt-4 max-w-sm text-sm leading-relaxed text-white/65">
               {siteConfig.shortTagline}
             </p>
+            {(email || phone) && (
+              <ul className="mt-5 space-y-2 text-sm text-white/65">
+                {email ? (
+                  <li>
+                    <a
+                      href={`mailto:${siteConfig.contactEmail}`}
+                      className="transition hover:text-white"
+                    >
+                      {siteConfig.contactEmail}
+                    </a>
+                  </li>
+                ) : null}
+                {phone ? (
+                  <li>
+                    <a
+                      href={telHref(siteConfig.contactPhone)}
+                      className="transition hover:text-white"
+                    >
+                      {siteConfig.contactPhone}
+                    </a>
+                  </li>
+                ) : null}
+              </ul>
+            )}
           </div>
 
           <FooterColumn title="Company" links={company} />

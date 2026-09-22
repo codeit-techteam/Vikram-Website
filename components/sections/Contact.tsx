@@ -20,7 +20,7 @@ export function Contact() {
         <SectionHeading
           eyebrow="Need help?"
           title="Have a requirement or looking for a material?"
-          description="Talk to our team. Contact details appear here as soon as they are configured."
+          description="Talk to our team for material requirements, order help or site delivery questions."
         />
 
         {hasContact ? (
@@ -56,9 +56,7 @@ export function Contact() {
           </div>
         ) : (
           <Reveal className="mx-auto mt-10 max-w-xl rounded-2xl border border-dashed border-line bg-white px-6 py-8 text-center text-sm leading-relaxed text-muted">
-            Add NEXT_PUBLIC_CONTACT_EMAIL, NEXT_PUBLIC_CONTACT_PHONE or NEXT_PUBLIC_WHATSAPP_URL
-            to enable the Talk to Our Team buttons. Until then, download the app and manage
-            orders from there.
+            Download the Bajriwala app to chat with our team and manage your orders.
           </Reveal>
         )}
       </Container>
