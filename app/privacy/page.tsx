@@ -161,19 +161,19 @@ export default function PrivacyPage() {
             <p>Depending on the device and the features you use, the app may request:</p>
             <ul className="list-disc space-y-1 pl-5">
               <li>
-                <span className="font-medium text-ink">Location</span> — to help set or confirm a
+                <span className="font-medium text-ink">Location</span> - to help set or confirm a
                 delivery site
               </li>
               <li>
-                <span className="font-medium text-ink">Microphone</span> — only if you use voice
+                <span className="font-medium text-ink">Microphone</span> - only if you use voice
                 search
               </li>
               <li>
-                <span className="font-medium text-ink">Notifications</span> — for order and account
+                <span className="font-medium text-ink">Notifications</span> - for order and account
                 alerts
               </li>
               <li>
-                <span className="font-medium text-ink">Network access</span> — to load the catalogue,
+                <span className="font-medium text-ink">Network access</span> - to load the catalogue,
                 cart, payments and order status
               </li>
             </ul>
@@ -204,28 +204,28 @@ export default function PrivacyPage() {
             <p>We share information only as needed to run the service:</p>
             <ul className="list-disc space-y-1 pl-5">
               <li>
-                <span className="font-medium text-ink">Payment processors</span> — to complete
+                <span className="font-medium text-ink">Payment processors</span> - to complete
                 online payments
               </li>
               <li>
-                <span className="font-medium text-ink">Delivery and fulfilment partners</span> — name,
+                <span className="font-medium text-ink">Delivery and fulfilment partners</span> - name,
                 phone and delivery address so materials can reach your site
               </li>
               <li>
-                <span className="font-medium text-ink">Cloud hosting and infrastructure</span> — to
+                <span className="font-medium text-ink">Cloud hosting and infrastructure</span> - to
                 store and operate the app
               </li>
               <li>
-                <span className="font-medium text-ink">Google and Apple</span> — as required to
+                <span className="font-medium text-ink">Google and Apple</span> - as required to
                 distribute the app, process store downloads and deliver push notifications (FCM /
                 APNs)
               </li>
               <li>
-                <span className="font-medium text-ink">Analytics providers</span> — only if analytics
+                <span className="font-medium text-ink">Analytics providers</span> - only if analytics
                 is enabled
               </li>
               <li>
-                <span className="font-medium text-ink">Professional advisers and authorities</span> —
+                <span className="font-medium text-ink">Professional advisers and authorities</span> -
                 where the law requires it
               </li>
             </ul>

@@ -10,7 +10,7 @@ export function Trust() {
         <SectionHeading
           eyebrow="Built for professionals"
           title="Built for Contractors, Builders & Construction Professionals"
-          description="Bajriwala is built around your construction needs — material discovery, digital ordering, site delivery and transparent pricing."
+          description="Bajriwala is built around your construction needs - material discovery, digital ordering, site delivery and transparent pricing."
         />
         <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-5">
           {trustPillars.map((item, index) => (

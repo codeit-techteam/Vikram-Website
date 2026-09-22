@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 import { siteConfig } from "@/lib/site-config";
 
-export const alt = "Bajriwala — Construction Materials. Delivered Right to Your Site.";
+export const alt = "Bajriwala - Construction Materials. Delivered Right to Your Site.";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -75,7 +75,7 @@ export default function OpenGraphImage() {
               Delivered Right to Your Site.
             </div>
             <div style={{ marginTop: 24, fontSize: 24, color: "#5B6472" }}>
-              Cement • RMC • Bricks • Sand • Aggregates
+              Cement - RMC - Bricks - Sand - Aggregates
             </div>
           </div>
           <div

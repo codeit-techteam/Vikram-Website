@@ -12,7 +12,7 @@ export function AppExperience() {
         <SectionHeading
           eyebrow="Designed for construction"
           title="Designed for Construction. Built for Mobile."
-          description="A sequence of the live Bajriwala Customer App — discover, browse, choose, order and track."
+          description="A sequence of the live Bajriwala Customer App - discover, browse, choose, order and track."
         />
 
         <div className="mt-12 grid items-center gap-10 lg:grid-cols-[0.9fr_1.1fr]">

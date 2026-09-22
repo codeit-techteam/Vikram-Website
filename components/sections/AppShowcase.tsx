@@ -10,7 +10,7 @@ export function AppShowcase() {
         <SectionHeading
           eyebrow="The customer app"
           title="Everything You Need. Right From Your Phone."
-          description="Discover materials, compare options, manage your cart and place orders — all from the Bajriwala app."
+          description="Discover materials, compare options, manage your cart and place orders - all from the Bajriwala app."
         />
 
         <div className="no-scrollbar mt-12 flex snap-x snap-mandatory gap-8 overflow-x-auto px-1 pb-4 lg:justify-center lg:overflow-visible">

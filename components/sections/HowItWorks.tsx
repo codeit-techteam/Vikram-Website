@@ -11,7 +11,7 @@ export function HowItWorks() {
         <SectionHeading
           eyebrow="How it works"
           title="Build Smarter in 4 Simple Steps"
-          description="From download to delivery — without chasing suppliers over the phone."
+          description="From download to delivery - without chasing suppliers over the phone."
         />
         <div className="mt-14 grid items-center gap-12 lg:grid-cols-[0.9fr_1.1fr]">
           <div className="hidden justify-center lg:flex">

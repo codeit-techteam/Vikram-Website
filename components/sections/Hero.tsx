@@ -33,10 +33,10 @@ export function Hero() {
               <span className="mt-1 block">Delivered Right to Your Site.</span>
             </h1>
             <p className="mt-5 max-w-lg text-base font-medium text-ink-soft sm:text-lg">
-              Buy Cement • RMC • Bricks • Sand • Aggregates & More
+              Buy Cement - RMC - Bricks - Sand - Aggregates & More
             </p>
             <p className="mt-4 max-w-xl text-base leading-relaxed text-muted sm:text-lg">
-              Buy cement, RMC, bricks, sand, aggregates and more through Bajriwala — with
+              Buy cement, RMC, bricks, sand, aggregates and more through Bajriwala - with
               transparent pricing, convenient ordering and reliable site delivery.
             </p>
 

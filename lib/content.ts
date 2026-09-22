@@ -54,7 +54,7 @@ export const materialCategories: MaterialCategory[] = [
   },
   {
     slug: "rmc",
-    name: "RMC — Ready-Mix Concrete",
+    name: "RMC - Ready-Mix Concrete",
     tabLabel: "RMC",
     description:
       "Ready-mix concrete delivered by transit mixer for slabs, columns and foundations, so you skip on-site batching.",
