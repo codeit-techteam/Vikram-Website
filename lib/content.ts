@@ -94,11 +94,11 @@ export const materialCategories: MaterialCategory[] = [
   },
   {
     slug: "adhesives",
-    name: "Adhesives & Sealants",
+    name: "Adhesives & Chemicals",
     tabLabel: "Adhesives",
     description:
-      "Tile adhesives, bonding agents and sealants for finishing work, from the brands contractors already ask for.",
-    highlights: ["Tile adhesive", "Bonding agents", "Sealants", "Brand options"],
+      "Construction adhesives, bonding agents, chemicals and sealants for finishing and structural work, from the brands contractors already ask for.",
+    highlights: ["Tile adhesive", "Bonding agents", "Construction chemicals", "Sealants"],
     image: "/images/categories/adhesives.jpg",
     imageAlt: "Caulking gun dispensing grey sealant during finishing work",
   },
@@ -113,19 +113,69 @@ export const materialCategories: MaterialCategory[] = [
     imageAlt: "Paint roller applying a waterproof coating to a wall surface",
   },
   {
-    slug: "wall-repair-putty",
-    name: "Wall Repair & Putty",
-    tabLabel: "Putty",
+    slug: "paint-putty",
+    name: "Paint & Putty",
+    tabLabel: "Paint & Putty",
     description:
-      "Wall putty, fillers and repair compounds to get surfaces smooth and ready before painting.",
-    highlights: ["Wall putty", "Crack fillers", "Surface prep", "Interior & exterior"],
+      "Interior and exterior paints plus wall putty and fillers to get surfaces smooth and ready before finishing.",
+    highlights: ["Emulsion & enamel", "Wall putty", "Primers", "Interior & exterior"],
     image: "/images/categories/putty.jpg",
     imageAlt: "Hands holding putty knives with white wall repair compound",
+  },
+  {
+    slug: "electrical",
+    name: "Electrical",
+    tabLabel: "Electrical",
+    description:
+      "Wires, switches, conduits and distribution essentials for site and finishing electrical work.",
+    highlights: ["Wiring & cables", "Switches", "Conduits", "MCB & distribution"],
+    image: "/images/categories/electrical.jpg",
+    imageAlt: "Electrical wiring and switchboard work on a construction site",
+  },
+  {
+    slug: "hardware-kitchens-wardrobes",
+    name: "Hardware Kitchens & Wardrobes",
+    tabLabel: "Hardware",
+    description:
+      "Kitchen and wardrobe hardware fittings — hinges, channels, handles and accessories for modular interiors.",
+    highlights: ["Kitchen fittings", "Wardrobe hardware", "Hinges & channels", "Handles & accessories"],
+    image: "/images/categories/hardware-kitchens.jpg",
+    imageAlt: "Kitchen cabinetry and hardware fittings in a modular interior",
+  },
+  {
+    slug: "tiles-grout",
+    name: "Tiles & Grout",
+    tabLabel: "Tiles & Grout",
+    description:
+      "Floor and wall tiles with matching grout for bathrooms, kitchens and living spaces.",
+    highlights: ["Floor tiles", "Wall tiles", "Tile grout", "Finishing packs"],
+    image: "/images/categories/tiles-grout.jpg",
+    imageAlt: "Bathroom floor tiles being laid with grout joints",
+  },
+  {
+    slug: "safety-wears",
+    name: "Safety Wears",
+    tabLabel: "Safety",
+    description:
+      "Site safety gear for crews — helmets, gloves, reflective wear and protective footwear.",
+    highlights: ["Helmets", "Gloves", "Reflective wear", "Safety footwear"],
+    image: "/images/categories/safety-wears.jpg",
+    imageAlt: "Construction workers wearing helmets and safety gear on site",
+  },
+  {
+    slug: "machines-tools",
+    name: "Machines & Tools",
+    tabLabel: "Machines & Tools",
+    description:
+      "Hand tools, power tools and site machines for cutting, drilling, measuring and everyday construction work.",
+    highlights: ["Hand tools", "Power tools", "Measuring tools", "Site equipment"],
+    image: "/images/categories/machines-tools.jpg",
+    imageAlt: "Power tools and construction equipment laid out for site use",
   },
 ];
 
 /** Categories that exist in the app but are not featured as cards above. */
-export const additionalCategories = ["Electrical & Wires", "Hardware & Fittings"];
+export const additionalCategories: string[] = [];
 
 export type AppScreen = {
   /** Path inside /public — add new screenshots here and the UI picks them up. */
@@ -175,7 +225,8 @@ export const appHighlights = [
   {
     icon: "grid" as const,
     title: "Material categories",
-    description: "Browse cement, RMC, bricks, adhesives, electrical and hardware.",
+    description:
+      "Browse cement, RMC, bricks, paint, electrical, hardware, tiles, safety and tools.",
   },
   {
     icon: "tag" as const,
@@ -414,7 +465,7 @@ export const faqs = [
   {
     question: "What materials can I order?",
     answer:
-      "Cement and white cement, ready-mix concrete, bricks and blocks, aggregates, sand, adhesives, waterproofing, wall repair and putty, plus electrical and hardware. The catalogue in the app is the most up-to-date list.",
+      "Cement and white cement, ready-mix concrete, bricks and blocks, aggregates, sand, adhesives and chemicals, waterproofing, paint and putty, electrical, hardware for kitchens and wardrobes, tiles and grout, safety wears, and machines and tools. The catalogue in the app is the most up-to-date list.",
   },
   {
     question: "How do I place an order?",

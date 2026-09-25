@@ -299,8 +299,15 @@ export default function PrivacyPage() {
             <p>
               You can review and update some details in the app Account area. To make a request, use
               the contact details in section 13. We may need to verify that the request comes from
-              the account holder. Google Play and the App Store also let you manage app permissions
-              and, where offered, account deletion through the store or in-app settings.
+              the account holder. Google Play and the App Store also let you manage app permissions.
+              For a permanent account deletion request, follow the steps on our{" "}
+              <Link
+                href="/account-deletion"
+                className="font-medium text-ink underline-offset-2 hover:underline"
+              >
+                Account Deletion
+              </Link>{" "}
+              page.
             </p>
           </LegalSection>
 
@@ -363,6 +370,9 @@ export default function PrivacyPage() {
           </ButtonLink>
           <ButtonLink href="/terms" variant="secondary" size="md">
             Terms & Conditions
+          </ButtonLink>
+          <ButtonLink href="/account-deletion" variant="secondary" size="md">
+            Account Deletion
           </ButtonLink>
         </div>
       </Container>

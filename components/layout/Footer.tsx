@@ -16,6 +16,7 @@ const support = [
 const legal = [
   { label: "Privacy Policy", href: "/privacy" },
   { label: "Terms & Conditions", href: "/terms" },
+  { label: "Account Deletion", href: "/account-deletion" },
 ];
 
 export function Footer() {
@@ -68,7 +69,7 @@ export function Footer() {
           <FooterColumn title="Company" links={company} />
           <FooterColumn
             title="Materials"
-            links={materialCategories.slice(0, 5).map((category) => ({
+            links={materialCategories.slice(0, 8).map((category) => ({
               label: category.tabLabel,
               href: "#materials",
             }))}

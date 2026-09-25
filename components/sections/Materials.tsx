@@ -112,9 +112,11 @@ export function Materials() {
           ))}
         </div>
 
-        <p className="mt-6 text-center text-sm text-muted">
-          Also in the app: {additionalCategories.join(" - ")}
-        </p>
+        {additionalCategories.length > 0 ? (
+          <p className="mt-6 text-center text-sm text-muted">
+            Also in the app: {additionalCategories.join(" - ")}
+          </p>
+        ) : null}
 
         <div id="materials-explorer" className="mt-16 scroll-mt-28 rounded-3xl border border-line bg-cream p-5 sm:p-8">
           <div className="no-scrollbar flex gap-2 overflow-x-auto pb-2">
