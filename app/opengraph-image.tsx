@@ -1,5 +1,10 @@
+import { readFile } from "node:fs/promises";
+import { join } from "node:path";
 import { ImageResponse } from "next/og";
 import { siteConfig } from "@/lib/site-config";
+
+const logoData = await readFile(join(process.cwd(), "public/brand/bajriwala-logo-on-light.png"), "base64");
+const logoSrc = `data:image/png;base64,${logoData}`;
 
 export const alt = "Bajriwala - Construction Materials. Delivered Right to Your Site.";
 export const size = { width: 1200, height: 630 };
@@ -48,24 +53,9 @@ export default function OpenGraphImage() {
             height: "100%",
           }}
         >
-          <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
-            <div
-              style={{
-                width: 56,
-                height: 56,
-                borderRadius: 14,
-                background: "#F5B301",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                color: "#14161A",
-                fontSize: 28,
-                fontWeight: 800,
-              }}
-            >
-              B
-            </div>
-            <div style={{ fontSize: 32, fontWeight: 700, color: "#14161A" }}>Bajriwala</div>
+          <div style={{ display: "flex", alignItems: "center" }}>
+            {/* eslint-disable-next-line jsx-a11y/alt-text */}
+            <img src={logoSrc} width={213} height={80} />
           </div>
           <div style={{ display: "flex", flexDirection: "column", maxWidth: 820 }}>
             <div style={{ fontSize: 58, fontWeight: 800, color: "#14161A", lineHeight: 1.05 }}>
