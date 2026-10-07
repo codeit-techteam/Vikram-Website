@@ -29,8 +29,8 @@ export const siteConfig = {
 
   // Defaults match the customer app support contacts; override via NEXT_PUBLIC_*.
   contactEmail: envOr(process.env.NEXT_PUBLIC_CONTACT_EMAIL, "support@bajriwala.com"),
-  contactPhone: envOr(process.env.NEXT_PUBLIC_CONTACT_PHONE, "+91 99999 99999"),
-  whatsappUrl: envOr(process.env.NEXT_PUBLIC_WHATSAPP_URL, "https://wa.me/919999999999"),
+  contactPhone: envOr(process.env.NEXT_PUBLIC_CONTACT_PHONE, "+91 92118 99956"),
+  whatsappUrl: envOr(process.env.NEXT_PUBLIC_WHATSAPP_URL, "https://wa.me/919211899956"),
 
   socialLinks: {
     instagram: env(process.env.NEXT_PUBLIC_INSTAGRAM_URL),
