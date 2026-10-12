@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { PhoneMockup } from "@/components/brand/PhoneMockup";
 import { Container } from "@/components/ui/Container";
 import { Reveal } from "@/components/ui/Reveal";
@@ -15,22 +14,27 @@ export function AppExperience() {
           description="A sequence of the live Bajriwala Customer App - discover, browse, choose, order and track."
         />
 
-        <div className="mt-12 grid items-center gap-10 lg:grid-cols-[0.9fr_1.1fr]">
-          <Reveal className="relative aspect-[3/4] overflow-hidden rounded-3xl sm:aspect-[4/5] lg:aspect-[3/4]">
-            <Image
-              src="/images/construction/contractor-phone.jpg"
-              alt="Construction professional ordering materials on a smartphone at a building site"
-              fill
-              sizes="(max-width: 1024px) 100vw, 480px"
-              className="object-cover object-center photo-drift"
-            />
-          </Reveal>
-          <div className="no-scrollbar flex gap-6 overflow-x-auto pb-2 lg:grid lg:grid-cols-2 lg:overflow-visible">
-            {appScreens.map((screen) => (
-              <PhoneMockup key={screen.src} screen={screen} caption className="shrink-0" />
+        <Reveal className="relative mt-12 overflow-hidden rounded-[2rem] bg-gradient-to-br from-brand-300 via-brand-400 to-brand-500 px-4 pt-12 sm:px-10 sm:pt-16">
+          <div className="pointer-events-none absolute inset-0 bg-blueprint opacity-50" />
+          <div className="pointer-events-none absolute -left-24 -top-24 h-72 w-72 rounded-full bg-white/30 blur-3xl" />
+          <div className="no-scrollbar relative flex snap-x snap-mandatory gap-6 overflow-x-auto pb-12 sm:pb-16 lg:justify-center lg:gap-10 lg:overflow-visible">
+            {appScreens.map((screen, index) => (
+              <div
+                key={screen.id}
+                className={`shrink-0 snap-center ${index === 1 ? "lg:-translate-y-6" : "lg:translate-y-6"}`}
+              >
+                <PhoneMockup screen={screen} />
+                <div className="mx-auto mt-6 max-w-[260px] rounded-2xl bg-white/70 px-4 py-3 text-center backdrop-blur">
+                  <p className="text-sm font-bold text-ink">
+                    <span className="mr-1.5 text-ink/40">0{index + 1}</span>
+                    {screen.caption}
+                  </p>
+                  <p className="mt-1 text-xs leading-relaxed text-ink/70">{screen.description}</p>
+                </div>
+              </div>
             ))}
           </div>
-        </div>
+        </Reveal>
 
         {featureFlags.loyaltyPoints ? (
           <Reveal className="mt-14 rounded-3xl border border-line bg-cream p-8">

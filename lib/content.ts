@@ -178,8 +178,12 @@ export const materialCategories: MaterialCategory[] = [
 export const additionalCategories: string[] = [];
 
 export type AppScreen = {
+  /** Stable key so sections can pick a specific screen. */
+  id: "home" | "deals" | "catalog";
   /** Path inside /public — add new screenshots here and the UI picks them up. */
   src: string;
+  /** Short label used on tabs and floating badges. */
+  label: string;
   /** Short caption shown under the phone. */
   caption: string;
   /** What the visitor should notice on this screen. */
@@ -196,24 +200,43 @@ export type AppScreen = {
  */
 export const appScreens: AppScreen[] = [
   {
-    src: "/images/app/home-categories.jpg",
+    id: "home",
+    src: "/images/app/home.jpg",
+    label: "Home",
     caption: "Discover",
     description:
-      "Set your delivery location, search for cement, RMC or sand, and jump straight into material categories.",
-    alt: "Bajriwala app home screen showing delivery location, search bar, free bike delivery banner and material categories",
-    width: 460,
+      "Set your delivery site, search for cement, RMC or sand, and jump straight into material categories.",
+    alt: "Bajriwala app home screen showing the delivery location, search bar, free bike delivery banner and material categories",
+    width: 487,
     height: 1024,
   },
   {
-    src: "/images/app/home-top-deals.jpg",
+    id: "deals",
+    src: "/images/app/top-deals.jpg",
+    label: "Top Deals",
     caption: "Compare",
     description:
       "See top deals with brand, pack size, discount and bulk pricing before you add anything to the cart.",
-    alt: "Bajriwala app home screen showing top deals with cement and stone aggregate product cards, prices, discounts and bulk pricing",
-    width: 460,
+    alt: "Bajriwala app home screen showing top deals for UltraTech PPC cement and 20mm stone aggregate with prices, discounts and bulk pricing",
+    width: 484,
+    height: 1024,
+  },
+  {
+    id: "catalog",
+    src: "/images/app/catalog.jpg",
+    label: "Catalog",
+    caption: "Choose",
+    description:
+      "Filter a category by brand, grade and price, then pick the variant and pack size you need.",
+    alt: "Bajriwala app adhesives catalogue with brand filters for Fevicol and Jivanjor and product cards showing variants, prices and discounts",
+    width: 489,
     height: 1024,
   },
 ];
+
+export function getAppScreen(id: AppScreen["id"]): AppScreen {
+  return appScreens.find((screen) => screen.id === id) ?? appScreens[0];
+}
 
 /** Interface details visible in the screenshots, used as annotated callouts. */
 export const appHighlights = [
